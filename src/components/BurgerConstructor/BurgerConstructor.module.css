@@ -1,9 +1,12 @@
 .constructorItem {
-    flex-grow: 0;
+    flex-grow: 1;
+    width: 100%;
 }
 
 .constructorBun {
     margin-left: 32px;
+    width: 100%;
+
 }
 
 .totalPrice {

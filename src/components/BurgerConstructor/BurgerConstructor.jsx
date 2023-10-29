@@ -142,6 +142,7 @@ const BurgerConstructor = (props) => {
         >
           {props.selectedIngredients.map((ingredient, i) => (
             <div
+              key={i}
               style={{
                 display: "flex",
                 gap: "8px",
@@ -149,9 +150,11 @@ const BurgerConstructor = (props) => {
               }}
             >
               <DragIcon type={"primary"} />
-              <div onClick={() => onIngredientInfoClick(ingredient)}>
+              <div
+                style={{ flexGrow: "1" }}
+                onClick={() => onIngredientInfoClick(ingredient)}
+              >
                 <ConstructorElement
-                  key={i}
                   text={ingredient.name}
                   thumbnail={ingredient.image}
                   price={ingredient.price}
